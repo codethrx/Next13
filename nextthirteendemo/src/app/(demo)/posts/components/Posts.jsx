@@ -10,13 +10,10 @@ async function Posts() {
   console.log(data);
   return (
     <div>
-      {data?.map(({ title, id }) => (
-        <>
-          <Link href={`/posts/${id}`} className="truncate">
-            {title}
-          </Link>
-          <br />
-        </>
+      {data?.splice(0, 25)?.map(({ title, id }) => (
+        <Link href={`/posts/${id}`} className="truncate" key={id}>
+          <p> {title}</p>
+        </Link>
       ))}
     </div>
   );
