@@ -1,6 +1,8 @@
 import "./globals.css";
 import { Poppins, Noto_Sans_Hebrew } from "@next/font/google";
 import { Provider } from "@/context/Ctx";
+// import Anime from "@/components/Anime";
+// import Nav from "@/components/Nav";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "400"],
@@ -20,9 +22,12 @@ export default function RootLayout({ children }) {
       */}
       <head />
       <Provider>
+        {/* <Nav /> */}
+        {/* <Anime> */}
         <body className={`${poppins.className} ${noto.className}`}>
           {children}
         </body>
+        {/* </Anime> */}
       </Provider>
     </html>
   );
